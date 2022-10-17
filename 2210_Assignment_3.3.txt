@@ -1,0 +1,7 @@
+sed -n 2~2p third
+sed -ne '2,4p' -e '8,11p' -e '$p' third
+sed -ne '8,$p' third
+sed  '$d' third
+sed -e '/this/d' third
+
+sed -e '1,2d' -e '8,$d' third
