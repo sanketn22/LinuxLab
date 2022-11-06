@@ -49,3 +49,18 @@ b.awk -f s1.awk employee.txt
          print "loss =" (-1*p);
         }' item.txt
 	
+5.a.awk -f s2.awk student.txt
+	BEGIN{FS ="\t";}
+	{
+	if($5>=80)
+	grade = "A";
+	else if(($5<80)&&($5>=60))
+	grade = "B";
+	else if(($5<60)&&($5>=40))
+	grade = "C";
+	else if($5<40)
+	grade = "F";
+	if (NR>1)
+	print $0,"	" grade; 
+	}
+b. 
